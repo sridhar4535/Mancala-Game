@@ -1,4 +1,3 @@
-package project;
 import java.io.*;
 import java.util.*;
 
@@ -122,10 +121,11 @@ public class mancala {
     static int s_flag = 0;
 
     public static void main(String[] args) {
-        ArrayList<String> output = new ArrayList<String>();
-        String Filename = "/Users/sridharyadav/IdeaProjects/Assignment2/src/project/input.txt";
-        String task = "";
-        try {
+            String Filename = args[1];
+            if(!Filename.toLowerCase().contains(".txt"))
+            Filename = Filename + ".txt";
+            String task = "";
+            try {
             File file = new File(Filename);
             BufferedReader in = new BufferedReader(new FileReader(file));
             task = in.readLine();

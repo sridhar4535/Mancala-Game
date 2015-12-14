@@ -2532,7 +2532,7 @@ public class mancala {
                     game.chance = 1;
                     game.name = "B" + Integer.toString(k + 2);
                     game.value = Integer.toString(game.Eval(turn));
-                    String t = game.name + "," + depth + "," + game.Eval(turn);
+                    String t = game.name + "," + depth + "," + game.Eval(turn)+ "," + game.Alpha + "," + game.Beta;
                     traverse.add(t);
                 }
                 if (game.chance == 0) {
